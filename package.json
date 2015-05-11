@@ -1,0 +1,19 @@
+{
+  "name": "markdown-gist",
+  "version": "0.0.1",
+  "description": "Change markdown code blocks for gists",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Adroaldo de Andrade <adroaldof@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "github": "^0.2.3",
+    "lodash": "^3.5.0"
+  },
+  "devDependencies": {
+    "mime-types": "^2.0.11",
+    "sequence": "^3.0.0"
+  }
+}
