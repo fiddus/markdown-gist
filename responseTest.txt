@@ -1,0 +1,110 @@
+REQUEST:  { host: 'api.github.com',
+  port: 443,
+  path: '/gists?access_token=fde5623a13cfde9e2b79d05406a0466c3fca8ef6',
+  method: 'post',
+  headers:
+   { host: 'api.github.com',
+     'content-length': 769,
+     'content-type': 'application/json; charset=utf-8',
+     'user-agent': 'NodeJS HTTP Client',
+     accept: 'application/vnd.github.v3+json' } }
+REQUEST BODY: {"public":true,"description":"Gist Test from API","files":{"test-0.js":{"type":"text/javascript","language":"javascript","content":"var fs = require('fs');\nvar path = require('path');\n\nvar filePath = path.join(__dirname, 'start.html');\n\nfs.readFile(filePath, {encoding: 'utf-8'}, function(err,data){\n    if (!err){\n        response.writeHead(200, {'Content-Type': 'text/html'});\n        response.write(data);\n        response.end();\n    }else{\n        console.log(err);\n    }\n});\n"},"test-1.html":{"type":"text/html","language":"html","content":"<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset=\"UTF-8\">\n        <title>Title of the document</title>\n    </head>\n\n    <body>\n        Content of the document......\n    </body>\n</html>\n"}}}
+
+STATUS: 201
+HEADERS: {"server":"GitHub.com","date":"Wed, 25 Mar 2015 20:48:25 GMT","content-type":"application/json; charset=utf-8","content-length":"3801","connection":"close","status":"201 Created","x-ratelimit-limit":"5000","x-ratelimit-remaining":"4963","x-ratelimit-reset":"1427317320","cache-control":"private, max-age=60, s-maxage=60","etag":"\"6df09f388c6621278bf0610c48634a4a\"","x-oauth-scopes":"gist, public_repo, user:email","x-accepted-oauth-scopes":"","location":"https://api.github.com/gists/90cecffa1b8ea21dbda4","vary":"Accept, Authorization, Cookie, X-GitHub-OTP, Accept-Encoding","x-github-media-type":"github.v3; format=json","x-xss-protection":"1; mode=block","x-frame-options":"deny","content-security-policy":"default-src 'none'","access-control-allow-credentials":"true","access-control-expose-headers":"ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval","access-control-allow-origin":"*","x-github-request-id":"BB70589D:2030:DAD20:55131F19","strict-transport-security":"max-age=31536000; includeSubdomains; preload","x-content-type-options":"nosniff","x-served-by":"8dd185e423974a7e13abbbe6e060031e"}
+{
+  "url": "https://api.github.com/gists/90cecffa1b8ea21dbda4?",
+  "forks_url": "https://api.github.com/gists/90cecffa1b8ea21dbda4/forks",
+  "commits_url": "https://api.github.com/gists/90cecffa1b8ea21dbda4/commits",
+  "id": "90cecffa1b8ea21dbda4",
+  "git_pull_url": "https://gist.github.com/90cecffa1b8ea21dbda4.git",
+  "git_push_url": "https://gist.github.com/90cecffa1b8ea21dbda4.git",
+  "html_url": "https://gist.github.com/90cecffa1b8ea21dbda4",
+  "files": {
+    "test-0.js": {
+      "filename": "test-0.js",
+      "type": "application/javascript",
+      "language": "JavaScript",
+      "raw_url": "https://gist.githubusercontent.com/adroaldof/90cecffa1b8ea21dbda4/raw/28a08f4166ab54ca3b600a6eee66814b7208fcd3/test-0.js",
+      "size": 348,
+      "truncated": false,
+      "content": "var fs = require('fs');\nvar path = require('path');\n\nvar filePath = path.join(__dirname, 'start.html');\n\nfs.readFile(filePath, {encoding: 'utf-8'}, function(err,data){\n    if (!err){\n        response.writeHead(200, {'Content-Type': 'text/html'});\n        response.write(data);\n        response.end();\n    }else{\n        console.log(err);\n    }\n});\n"
+    },
+    "test-1.html": {
+      "filename": "test-1.html",
+      "type": "text/html",
+      "language": "HTML",
+      "raw_url": "https://gist.githubusercontent.com/adroaldof/90cecffa1b8ea21dbda4/raw/4a4578c96c630cf2d6641772e3e448806a765974/test-1.html",
+      "size": 192,
+      "truncated": false,
+      "content": "<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset=\"UTF-8\">\n        <title>Title of the document</title>\n    </head>\n\n    <body>\n        Content of the document......\n    </body>\n</html>\n"
+    }
+  },
+  "public": true,
+  "created_at": "2015-03-25T20:48:25Z",
+  "updated_at": "2015-03-25T20:48:25Z",
+  "description": "Gist Test from API",
+  "comments": 0,
+  "user": null,
+  "comments_url": "https://api.github.com/gists/90cecffa1b8ea21dbda4/comments",
+  "owner": {
+    "login": "adroaldof",
+    "id": 4036613,
+    "avatar_url": "https://avatars.githubusercontent.com/u/4036613?v=3",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/adroaldof",
+    "html_url": "https://github.com/adroaldof",
+    "followers_url": "https://api.github.com/users/adroaldof/followers",
+    "following_url": "https://api.github.com/users/adroaldof/following{/other_user}",
+    "gists_url": "https://api.github.com/users/adroaldof/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/adroaldof/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/adroaldof/subscriptions",
+    "organizations_url": "https://api.github.com/users/adroaldof/orgs",
+    "repos_url": "https://api.github.com/users/adroaldof/repos",
+    "events_url": "https://api.github.com/users/adroaldof/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/adroaldof/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "forks": [],
+  "history": [
+    {
+      "user": {
+        "login": "adroaldof",
+        "id": 4036613,
+        "avatar_url": "https://avatars.githubusercontent.com/u/4036613?v=3",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/adroaldof",
+        "html_url": "https://github.com/adroaldof",
+        "followers_url": "https://api.github.com/users/adroaldof/followers",
+        "following_url": "https://api.github.com/users/adroaldof/following{/other_user}",
+        "gists_url": "https://api.github.com/users/adroaldof/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/adroaldof/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/adroaldof/subscriptions",
+        "organizations_url": "https://api.github.com/users/adroaldof/orgs",
+        "repos_url": "https://api.github.com/users/adroaldof/repos",
+        "events_url": "https://api.github.com/users/adroaldof/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/adroaldof/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "version": "05e5e37cd9e4c8053b6aa376e4e050da46fdb0e6",
+      "committed_at": "2015-03-25T20:48:25Z",
+      "change_status": {
+        "total": 25,
+        "additions": 25,
+        "deletions": 0
+      },
+      "url": "https://api.github.com/gists/90cecffa1b8ea21dbda4/05e5e37cd9e4c8053b6aa376e4e050da46fdb0e6"
+    }
+  ],
+  "meta": {
+    "x-ratelimit-limit": "5000",
+    "x-ratelimit-remaining": "4963",
+    "x-ratelimit-reset": "1427317320",
+    "x-oauth-scopes": "gist, public_repo, user:email",
+    "location": "https://api.github.com/gists/90cecffa1b8ea21dbda4",
+    "etag": "\"6df09f388c6621278bf0610c48634a4a\"",
+    "status": "201 Created"
+  }
+}
