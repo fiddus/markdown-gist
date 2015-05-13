@@ -23,11 +23,11 @@ Right now it is working just for [GitHub Flavored Markdown](https://help.github.
 
 1. Now execute the file with the markdown file with code blocks you want to display github blocks
 
-        node index.js <file.md>
+        node main.js <file.md>
 
 ## Test if it worked
 
-    node index.js test.md
+    node main.js test.md
 
 If every thing went well, you get some answer like this on your console
 
