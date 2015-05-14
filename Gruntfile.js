@@ -9,12 +9,12 @@ module.exports = function (grunt) {
                 jshintrc: true,
                 ignores: ['node_modules/**/*']
             },
-            all: ['./*.js']
+            all: ['./**/*.js']
         },
 
         jscs: {
             src: [
-                'app.js',
+                'lib/**/*.js',
                 'test/**/*.js',
                 'Gruntfile.js'
             ],
@@ -22,11 +22,25 @@ module.exports = function (grunt) {
                 config: '.jscsrc',
                 verbose: true
             }
+        },
+
+        mochaTest: {
+            test: {
+                options: {
+                    reporter: 'spec'
+                }
+            },
+            src: ['test/**/*Test.js']
         }
     });
 
     grunt.registerTask('check', [
         'jshint',
         'jscs'
+    ]);
+
+    grunt.registerTask('test', [
+        'check',
+        'mochaTest'
     ]);
 };
