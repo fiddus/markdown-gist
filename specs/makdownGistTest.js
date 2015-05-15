@@ -25,14 +25,14 @@ describe('Markdown to Gist Tests', function () {
         // jscs:disable
         var blocks = [ '```javascript\n(function () {\n    console.log(\'Every thing alright\');\n })();\n```',
             '```html\n<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset="UTF-8">\n        <title>Title of the document</title>\n    </head>\n\n    <body>\n        Content of the document......\n    </body>\n</html>\n```\n'],
-            fileName = 'test-file',
+            fileName = 'specs-file',
             gistFiles = {
-                'test-file-0.js': {
+                'specs-file-0.js': {
                     type: false,
                     language: 'javascript',
                     content: '(function () {\n    console.log(\'Every thing alright\');\n })();'
                 },
-                'test-file-1.html': {
+                'specs-file-1.html': {
                     type: 'text/html',
                     language: 'html',
                     content: '<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset="UTF-8">\n        <title>Title of the document</title>\n    </head>\n\n    <body>\n        Content of the document......\n    </body>\n</html>\n'
@@ -101,12 +101,12 @@ describe('Markdown to Gist Tests', function () {
                     'id': 'd18fe87190ed4b7fcce6',
                     'files': {
                         'test-0.js': {
-                            'filename': 'test-0.js',
+                            'filename': 'specs-0.js',
                             'language': 'JavaScript',
                             'content': '    (function () {\n        console.log(\'Everything alright\');\n    })();\n'
                         },
                         'test-1.html': {
-                            'filename': 'test-1.html',
+                            'filename': 'specs-1.html',
                             'language': 'HTML',
                             'content': '<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset=\"UTF-8\">\n        <title>Title of the document</title>\n    </head>\n\n    <body>\n        Content of the document......\n    </body>\n</html>\n'
                         }
@@ -140,16 +140,22 @@ describe('Markdown to Gist Tests', function () {
                 + '```\n',
             post = '# Lets See\n'
                 + '\n'
-                + 'https://gist.github.com/username/d18fe87190ed4b7fcce6#file-test-0-js\n'
+                + 'https://gist.github.com/username/d18fe87190ed4b7fcce6#file-specs-0-js\n'
                 + '\n'
                 + '## Other html\n'
                 + '\n'
-                + 'https://gist.github.com/username/d18fe87190ed4b7fcce6#file-test-1-html\n';
+                + 'https://gist.github.com/username/d18fe87190ed4b7fcce6#file-specs-1-html\n';
 
         expect(markdownGist.mountWordpressPost(partialResponse, fileContent)).to.equal(post);
     });
 
-    it('Should generate a mardown with gist urls where there were code blocks', function () {
-
-    });
+    // it('Should return one error message when there are no code blocks with GitHub markdown syntax', function () {
+    //    var errorMessage = 'Error: There are no blocks make with GitHub Markdown systax.';
+    //
+    //    expect(markdownGist.mountWordpressPost({}, 'noName')).to.be.equal(errorMessage);
+    // });
+    //
+    // it('Should generate a mardown with gist urls where there were code blocks', function () {
+    //
+    // });
 });

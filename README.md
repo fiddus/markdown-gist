@@ -27,7 +27,7 @@ Right now it is working just for [GitHub Flavored Markdown](https://help.github.
 
 ## Test if it worked
 
-    node main.js test.md
+    node main.js spec/helpers/test.md
 
 If every thing went well, you get some answer like this on your console
 
@@ -37,14 +37,14 @@ If every thing went well, you get some answer like this on your console
     ****************************************************************
     ----------------------------------------------------------------
     # Lets See
-    
+
     https://gist.github.com/<user>/798316497939f203a323#file-test-0-js
-    
+
     ## Other html
-    
+
     https://gist.github.com/<user>/798316497939f203a323#file-test-1-html
-    
+
     End of File
     ---
-    
+
     ----------------------------------------------------------------

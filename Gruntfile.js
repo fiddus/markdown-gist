@@ -15,7 +15,7 @@ module.exports = function (grunt) {
         jscs: {
             src: [
                 'lib/**/*.js',
-                'test/**/*.js',
+                'specs/**/*.js',
                 'Gruntfile.js'
             ],
             options: {
@@ -27,10 +27,10 @@ module.exports = function (grunt) {
         mochaTest: {
             test: {
                 options: {
-                    reporter: 'spec'
+                    reporter: 'specs'
                 }
             },
-            src: ['test/**/*Test.js']
+            src: ['specs/**/*Test.js']
         }
     });
 
