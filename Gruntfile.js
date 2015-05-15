@@ -25,12 +25,13 @@ module.exports = function (grunt) {
         },
 
         mochaTest: {
-            test: {
+            specs: {
                 options: {
-                    reporter: 'specs'
-                }
-            },
-            src: ['specs/**/*Test.js']
+                    reporter: 'spec',
+                    require: './specs/helpers/chai'
+                },
+                src: ['specs/**/*Test.js']
+            }
         }
     });
 

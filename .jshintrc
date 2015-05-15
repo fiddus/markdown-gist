@@ -20,6 +20,7 @@
     "smarttabs": true,
     "expr": true,
     "laxbreak": true,
+    "mocha": true,
     "globals": {
         "angular": false,
         "app": true,

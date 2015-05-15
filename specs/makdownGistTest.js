@@ -1,10 +1,9 @@
-/* global describe: true, it: true */
+/* global expect: true */
 
 'use strict';
 
 
-var markdownGist = require('../lib/markdownGist'),
-    expect = require('chai').expect;
+var markdownGist = require('../lib/markdownGist');
 
 describe('Markdown to Gist Tests', function () {
     it('Should get right file extensions', function () {
