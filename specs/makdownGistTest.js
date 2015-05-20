@@ -148,13 +148,9 @@ describe('Markdown to Gist Tests', function () {
         expect(markdownGist.mountWordpressPost(partialResponse, fileContent)).to.equal(post);
     });
 
-    // it('Should return one error message when there are no code blocks with GitHub markdown syntax', function () {
-    //    var errorMessage = 'Error: There are no blocks make with GitHub Markdown systax.';
-    //
-    //    expect(markdownGist.mountWordpressPost({}, 'noName')).to.be.equal(errorMessage);
-    // });
-    //
-    // it('Should generate a mardown with gist urls where there were code blocks', function () {
-    //
-    // });
+    it('Should return one error message when there are no code blocks with GitHub markdown syntax', function () {
+        var errorMessage = 'Error: There are no blocks make with GitHub Markdown systax.';
+
+        expect(markdownGist.parseGitHubMarkdownFile('./specs/helpers/testMarkdown.md')).to.be.equal(errorMessage);
+    });
 });
